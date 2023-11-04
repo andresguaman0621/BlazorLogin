@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using apprueba.Controllers;
 
 namespace apprueba.Areas.Identity.Pages.Account
 {
@@ -116,7 +117,10 @@ namespace apprueba.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
-                    return LocalRedirect(returnUrl);
+                    
+                    return LocalRedirect("/Home/Privacy");
+                    //return LocalRedirect(returnUrl);
+
                 }
                 if (result.RequiresTwoFactor)
                 {

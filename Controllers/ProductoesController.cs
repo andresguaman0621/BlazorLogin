@@ -52,8 +52,11 @@ namespace apprueba.Controllers
         {
             //Borrar datos de la ase de datos
             var existingProducts = _context.Producto.ToList();
-            _context.Producto.RemoveRange(existingProducts);
-            _context.SaveChanges();
+            
+                _context.Producto.RemoveRange(existingProducts);
+                _context.SaveChanges();
+            
+            
 
             //Crear productos de tipo producto
             var productoUno = new Producto { Nombre = "Hamburguesa uno", Precio = 10, Imagen = "https://www.citycountry.net.au/wp-content/uploads/2021/09/242610-Steggles.jpg" };
