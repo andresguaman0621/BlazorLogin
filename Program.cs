@@ -1,7 +1,11 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using apprueba.Areas.Identity.Data;
+using Microsoft.Extensions.DependencyInjection;
+using apprueba.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<appruebaContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("appruebaContext") ?? throw new InvalidOperationException("Connection string 'appruebaContext' not found.")));
 var connectionString = builder.Configuration.GetConnectionString("DbContextSampleConnection") ?? throw new InvalidOperationException("Connection string 'DbContextSampleConnection' not found.");
 
 builder.Services.AddDbContext<DbContextSample>(options =>
