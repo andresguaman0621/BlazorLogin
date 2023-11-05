@@ -15,5 +15,7 @@ namespace apprueba.Data
         }
 
         public DbSet<apprueba.Models.Producto> Producto { get; set; } = default!;
+
+        public DbSet<apprueba.Models.Orden>? Orden { get; set; }
     }
 }

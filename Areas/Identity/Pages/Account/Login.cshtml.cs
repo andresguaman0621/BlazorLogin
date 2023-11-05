@@ -118,7 +118,7 @@ namespace apprueba.Areas.Identity.Pages.Account
                 {
                     _logger.LogInformation("User logged in.");
                     
-                    return LocalRedirect("/Productoes/Index");
+                    return LocalRedirect("/Home/Privacy");
                     //return LocalRedirect(returnUrl);
 
                 }

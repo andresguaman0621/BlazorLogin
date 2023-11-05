@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using apprueba.Data;
 
@@ -10,9 +11,10 @@ using apprueba.Data;
 namespace apprueba.Migrations.apprueba
 {
     [DbContext(typeof(appruebaContext))]
-    partial class appruebaContextModelSnapshot : ModelSnapshot
+    [Migration("20231105163726_tablaOrden")]
+    partial class tablaOrden
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
