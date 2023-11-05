@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/apprueba.styles.css" asp-append-version="true" />
+
+
 </head>
 <body>
     <header>
@@ -44,7 +46,12 @@
             @RenderBody()
         </main>
     </div>
+    <script>
+      
 
+        // Llama a la función al cargar la página
+        window.onload = signOut;
+    </script>
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2023 - apprueba - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>

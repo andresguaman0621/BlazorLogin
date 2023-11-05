@@ -2,17 +2,19 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using apprueba.Data;
 
 #nullable disable
 
-namespace apprueba.Migrations.apprueba
+namespace apprueba.Migrations
 {
     [DbContext(typeof(appruebaContext))]
-    partial class appruebaContextModelSnapshot : ModelSnapshot
+    [Migration("20231105181039_nuevaTablaOrden")]
+    partial class nuevaTablaOrden
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,8 +48,8 @@ namespace apprueba.Migrations.apprueba
                     b.Property<bool>("PapasExtra")
                         .HasColumnType("bit");
 
-                    b.Property<decimal>("Precio")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<double>("Precio")
+                        .HasColumnType("float");
 
                     b.HasKey("Id");
 

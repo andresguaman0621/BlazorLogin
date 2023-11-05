@@ -18,12 +18,12 @@ namespace apprueba.Controllers
             var existingProducts = _context.Orden.ToList();
             _context.Orden.RemoveRange(existingProducts);
             _context.SaveChanges();
-
+            
             //Crear productos de tipo producto
-            var OrdenUno = new Orden { Nombre = "Alitas", Precio = 10, Imagen = "https://www.citycountry.net.au/wp-content/uploads/2021/09/242610-Steggles.jpg" };
-            var OrdenDos = new Orden { Nombre = "Nuggets", Precio = 12, Imagen = "https://5.imimg.com/data5/FW/BX/MY-5028075/500gm-chicken-nuggets-250x250.jpg" };
-            var OrdenTres = new Orden { Nombre = "Papas Fritas", Precio = 15, Imagen = "https://nourishplate.com/wp-content/uploads/2020/03/Air-fryer-french-fries-9-250x250.jpg" };
-            var OrdenCuatro = new Orden { Nombre = "Hamburguesa", Precio = 13, Imagen = "https://media.pedilo.store/1686070724541-DSC08566-1.jpg?w=250&h=250&q=100&fm=webp" };
+            var OrdenUno = new Orden { Nombre = "Alitas", Precio = 10.00, Imagen = "https://www.citycountry.net.au/wp-content/uploads/2021/09/242610-Steggles.jpg" };
+            var OrdenDos = new Orden { Nombre = "Nuggets", Precio = 12.00, Imagen = "https://5.imimg.com/data5/FW/BX/MY-5028075/500gm-chicken-nuggets-250x250.jpg" };
+            var OrdenTres = new Orden { Nombre = "Papas Fritas", Precio = 15.00, Imagen = "https://nourishplate.com/wp-content/uploads/2020/03/Air-fryer-french-fries-9-250x250.jpg" };
+            var OrdenCuatro = new Orden { Nombre = "Hamburguesa", Precio = 13.00, Imagen = "https://media.pedilo.store/1686070724541-DSC08566-1.jpg?w=250&h=250&q=100&fm=webp" };
 
             //Agregar los productos a la base de datos
             _context.Orden.AddRange(OrdenUno, OrdenDos, OrdenTres, OrdenCuatro);
@@ -41,9 +41,9 @@ namespace apprueba.Controllers
         // GET: Ordens
         public async Task<IActionResult> Index()
         {
-              return _context.Orden != null ? 
-                          View(await _context.Orden.ToListAsync()) :
-                          Problem("Entity set 'appruebaContext.Orden'  is null.");
+            return _context.Orden != null ?
+                        View(await _context.Orden.ToListAsync()) :
+                        Problem("Entity set 'appruebaContext.Orden'  is null.");
         }
 
         // GET: Ordens/Details/5
@@ -169,14 +169,14 @@ namespace apprueba.Controllers
             {
                 _context.Orden.Remove(orden);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool OrdenExists(int id)
         {
-          return (_context.Orden?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Orden?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }
