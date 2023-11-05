@@ -59,10 +59,10 @@ namespace apprueba.Controllers
             
 
             //Crear productos de tipo producto
-            var productoUno = new Producto { Nombre = "Hamburguesa uno", Precio = 10, Imagen = "https://www.citycountry.net.au/wp-content/uploads/2021/09/242610-Steggles.jpg" };
-            var productoDos = new Producto { Nombre = "Hamburguesa dos", Precio = 12, Imagen = "https://5.imimg.com/data5/FW/BX/MY-5028075/500gm-chicken-nuggets-250x250.jpg" };
-            var productoTres = new Producto { Nombre = "Hamburguesa tres", Precio = 15, Imagen = "https://nourishplate.com/wp-content/uploads/2020/03/Air-fryer-french-fries-9-250x250.jpg" };
-            var productoCuatro = new Producto { Nombre = "Hamburguesa cuatro", Precio = 13, Imagen = "https://media.pedilo.store/1686070724541-DSC08566-1.jpg?w=250&h=250&q=100&fm=webp" };
+            var productoUno = new Producto { Nombre = "Alitas", Precio = 10, Imagen = "https://www.citycountry.net.au/wp-content/uploads/2021/09/242610-Steggles.jpg" };
+            var productoDos = new Producto { Nombre = "Nuggets", Precio = 12, Imagen = "https://5.imimg.com/data5/FW/BX/MY-5028075/500gm-chicken-nuggets-250x250.jpg" };
+            var productoTres = new Producto { Nombre = "Papas Fritas", Precio = 15, Imagen = "https://nourishplate.com/wp-content/uploads/2020/03/Air-fryer-french-fries-9-250x250.jpg" };
+            var productoCuatro = new Producto { Nombre = "Hamburguesa", Precio = 13, Imagen = "https://media.pedilo.store/1686070724541-DSC08566-1.jpg?w=250&h=250&q=100&fm=webp" };
 
             //Agregar los productos a la base de datos
             _context.Producto.AddRange(productoUno, productoDos, productoTres, productoCuatro);
