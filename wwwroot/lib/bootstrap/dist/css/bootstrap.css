@@ -2963,10 +2963,17 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
 }
+
+/*.btn-custom {
+    color: #fff;
+    background-color: #CF2F2F;
+    border-color: #CF2F2F;
+}*/
+
 .btn-primary:hover {
   color: #fff;
   background-color: #0b5ed7;
@@ -7685,6 +7692,7 @@ textarea.form-control-lg {
 .text-dark {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;
+
 }
 
 .text-black {

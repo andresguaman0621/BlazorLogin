@@ -1,0 +1,108 @@
+﻿@page "/"
+
+<PageTitle>InicioTTHH</PageTitle>
+<div class="container">
+    <img src="/logodos.png" class="centered-img">
+</div>
+<br/>
+<h3 class="title">Sistema TTHH</h3>
+
+<div class="form-container">
+    <div class="form-group">
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" class="form-control" placeholder="Ingrese su usuario">
+    </div>
+
+    <div class="form-group">
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" class="form-control" placeholder="Ingrese su contraseña">
+    </div>
+
+    <div class="form-group">
+        <label for="empleado">Empleado:</label>
+        <select id="empleado" class="form-control">
+            <option value="opcion1">Opción 1</option>
+            <option value="opcion2">Opción 2</option>
+        </select>
+    </div>
+
+    <div class="button-container">
+        
+        @* <button class="btn btn-aceptar">Aceptar</button> *@
+        <a href="/MenuPage" class="btn btn-aceptar">Aceptar</a>
+        <button class="btn btn-ayuda">Ayuda</button>
+ 
+    </div>
+</div>
+
+<style>
+    .image{
+
+    }
+    .title {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #1f6cb6;
+    }
+
+    .form-container {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .button-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-aceptar {
+        background-color: #4CAF50;
+        color: white;
+        margin-right: 10px;
+    }
+
+    .btn-ayuda {
+        background-color: #008CBA;
+        color: white;
+        
+    }
+
+    .btn:hover {
+        opacity: 0.8;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* Estilos adicionales para el contenedor si es necesario */
+        width: 100%; /* Ajustar al tamaño deseado */
+        height: 2%; /* Ajustar al tamaño deseado */
+        /* border: 1px solid #ccc; /* Ejemplo de borde */ */
+    }
+
+    .centered-img {
+        max-width: 5%; /* Asegura que la imagen no exceda el ancho del contenedor */
+        max-height: 5%; /* Asegura que la imagen no exceda la altura del contenedor */
+    }
+</style>

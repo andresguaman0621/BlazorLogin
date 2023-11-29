@@ -25,6 +25,7 @@ namespace apprueba.Controllers
               return _context.Producto != null ? 
                           View(await _context.Producto.ToListAsync()) :
                           Problem("Entity set 'appruebaContext.Producto'  is null.");
+                          
         }
 
         // GET: Productoes/Details/5

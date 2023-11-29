@@ -2,11 +2,42 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">BIENVENIDO AL MENU  DIGITAL DE FAST FU</h1>
-    
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="" asp-controller="Productoes" asp-action="InicializarProductos">VER MENU</a>
-    </li>
+<style>
+    .bold-text {
+        font-weight: bold;
+        letter-spacing: 0.5px; /* Ajusta el espaciado según tu preferencia */
+    }
 
+    .text-center-padding {
+        padding-left: 11%; /* Ajusta el valor según tus necesidades */
+        padding-right: 5%; /* Ajusta el valor según tus necesidades */
+        text-align: center;
+    }
+
+    .move-left {
+        margin-left: -11%; /* Ajusta el valor según tus necesidades */
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <!-- Parte Izquierda -->
+        <div class="col-md-6 mt-5 move-left">
+            <img src="https://shorturl.at/hzKR4" alt="Fast Fu Logo" class="img-fluid mt-3" style="max-width: 135%; height: auto;">
+        </div>
+        <!-- Parte Derecha -->
+        <div class="col-md-7 text-center-padding">
+            <div class="text-center mt-4">
+                <br></br>
+                <br></br>
+                <br></br>
+                <h2 class="display-4 bold-text">Los mejores en comida rápida</h2>
+                <p class="lead">Disfruta de esta experiencia a través de nuestro menú digital. Ordena con confianza y recíbelo en tu mesa.</p>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="@Url.Action("InicializarProductos", "Productoes")" class="btn btn-danger btn-rounded btn-lg">VER MENU</a>
+            </div>
+        </div>
+    </div>
 </div>
